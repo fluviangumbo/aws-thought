@@ -14,7 +14,7 @@ const params = {
         { AttributeName: 'username', AttributeType: 'S' },
         { AttributeName: 'createdAt', AttributeType: 'N' },
     ],
-    ProvisionedThroughout: {
+    ProvisionedThroughput: {
         ReadCapacityUnits: 10,
         WriteCapacityUnits: 10,
     },
