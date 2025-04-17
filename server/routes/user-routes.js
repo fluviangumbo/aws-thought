@@ -10,3 +10,17 @@ AWS.config.update(awsConfig);
 
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 const table = 'Thoughts';
+
+router.get('/users', (req, res) => {
+    const params = {
+        TableName: table,
+    };
+
+    dynamodb.scan(params, (err, data) => {
+        if (err) {
+            res.status(500).json(err);
+        } else {
+            res.json(data.Items);
+        }
+    });
+});
