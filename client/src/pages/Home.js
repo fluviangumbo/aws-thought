@@ -15,7 +15,7 @@ const Home = () => {
           a.createdAt < b.createdAt ? 1 : -1,
         );
 
-        setThoughts([...data]);
+        setThoughts([..._data]);
         setIsLoaded(true);
       } catch (err) {
         console.log(err);
