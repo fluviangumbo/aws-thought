@@ -18,6 +18,15 @@ const s3 = new AWS.S3({
 });
 
 router.post('/image-upload', upload, (req, res) => {
-    const params = parmsConfig(req.file);
-    
+    console.log("post('/api/image-upload'", req.file);
+    const params = paramsConfig(req.file);
+    s3.upload(params, (err, data) => {
+        if (err) {
+            console.error(err);
+            res.status(500).send(err);
+        }
+        res.json(data);
+    })
 });
+
+module.exports = router;
