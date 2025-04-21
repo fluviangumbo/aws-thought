@@ -34,11 +34,12 @@ router.get('/users/:username', (req, res) => {
             '#un': 'username',
             '#ca': 'createdAt',
             '#th': 'thought',
+            "#img": "image",
         },
         ExpressionAttributeValues: {
             ':user': req.params.username,
         },
-        ProjectionExpression: '#th, #ca',
+        ProjectionExpression: '#un, #th, #ca, #img',
         ScanIndexForward: false,
     };
 
