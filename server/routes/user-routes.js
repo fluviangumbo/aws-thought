@@ -42,6 +42,7 @@ router.get('/users/:username', (req, res) => {
         ProjectionExpression: '#un, #th, #ca, #img',
         ScanIndexForward: false,
     };
+    console.log(req.body);
 
     dynamodb.query(params, (err, data) => {
         if (err) {
