@@ -1,4 +1,4 @@
-# AWS Thoughts App
+# AWS Thoughts App (INACTIVE - CLOSED TO PREVENT CHARGES)
 
 
 ## Description
